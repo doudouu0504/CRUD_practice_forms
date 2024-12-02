@@ -1,0 +1,9 @@
+{% extends "shared/layout.html" %}{% block "content" %}
+
+<form method="POST" action="{% url 'resumes:show' resumes.id %}">
+  {% csrf_token %}<br />
+  {{ forms.as_p }}
+  <br />
+  <button>更新</button>
+</form>
+{% endblock %}

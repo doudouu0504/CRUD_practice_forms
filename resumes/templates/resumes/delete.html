@@ -1,0 +1,10 @@
+{% extends "shared/layout.html" %}{% block "content" %}
+
+<form method="POST" action="">
+  {%csrf_token%} <br />
+  確認刪除？
+  <button>確認</button>
+</form>
+
+<a href="{%url 'resumes:home'%}">返回</a>
+{% endblock %}
